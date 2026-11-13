@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automatización de procesos para negocios · Nodo Ventas</title>
+  <meta name="description" content="En Nodo Ventas automatizamos las tareas manuales que les comen el día: pedidos por WhatsApp a una planilla, turnos y recordatorios, presupuestos en PDF, carga de facturas y seguimiento de clientes. Arrancamos desde $90.000 ARS.">
+  <meta name="theme-color" content="#F6F7FB">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Geist:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./nodo.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="nv">
+  <header class="nv-header">
+    <div class="nv-wrap">
+      <a class="nv-logo" href="./"><img src="./img/nodo-ventas-logo.svg" alt="Nodo Ventas" width="182" height="30"></a>
+      <nav class="nv-nav">
+        <a class="nv-hide-sm" href="#casos">Casos</a>
+        <a class="nv-hide-sm" href="#planes">Planes</a>
+        <a class="nv-btn nv-btn-primary" href="mailto:nodoventas.ar@gmail.com?subject=Automatizaci%C3%B3n%20de%20procesos">Lo charlamos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="nv-hero">
+      <div class="nv-wrap">
+        <div>
+          <h1>Automatizamos las tareas manuales que les <span class="nv-mark">comen el día</span>.</h1>
+          <p class="nv-lead">Si los pedidos llegan por WhatsApp, los turnos se anotan por teléfono o las cotizaciones se arman a mano, podemos dejar eso andando solo. Lo miramos juntos, lo ordenamos y lo automatizamos, a la medida de su negocio.</p>
+          <div class="nv-cta-row">
+            <a class="nv-btn nv-btn-primary" href="mailto:nodoventas.ar@gmail.com?subject=Automatizaci%C3%B3n%20de%20procesos">Lo charlamos</a>
+            <a class="nv-btn nv-btn-line" href="#casos">Ver cómo queda</a>
+          </div>
+          <p class="nv-note">Las pantallas de esta página usan datos de ejemplo, marcados como tal. No son de un cliente real.</p>
+        </div>
+        <div class="hero-flow" aria-hidden="true">
+          <div class="wa">
+            <div class="wa-top">
+              <div class="wa-avatar">CL</div>
+              <div>
+                <div class="wa-who">WhatsApp · pedidos</div>
+                <div class="wa-sub">Conversación de ejemplo</div>
+              </div>
+            </div>
+            <div class="wa-body">
+              <div class="bub bub-in">Hola, para mañana: 12 filtros de aceite y 4 pastillas de freno, por favor.<time>10:14</time></div>
+              <div class="bub bub-out">Recibido, ya quedó cargado en la planilla.<time>10:14 <span class="ticks">✓✓</span></time></div>
+            </div>
+          </div>
+          <div class="flow-join">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="summary">
+            <h4>Resumen del día <span class="ex">ejemplo</span></h4>
+            <ul>
+              <li>Pedidos cargados <b>8</b></li>
+              <li>Para entregar mañana <b>3</b></li>
+              <li>Último ingreso <b>10:14</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nv-section nv-cases" id="casos">
+      <div class="nv-wrap">
+        <div class="nv-head">
+          <h2>Cuatro procesos que solemos automatizar</h2>
+          <p>Son los que más vemos en negocios que ya tienen web, pero siguen haciendo gran parte del trabajo a mano. Cada uno se arma a la medida de cómo trabajan hoy.</p>
+        </div>
+
+        <article class="case">
+          <div class="case-copy">
+            <h3>Pedidos de WhatsApp a la planilla</h3>
+            <p class="case-lead">El chat sigue siendo el mostrador. Lo que cambia es que el pedido no se copia a mano ni se pierde entre mensajes.</p>
+            <div class="ba">
+              <div class="ba-item">
+                <p class="ba-label">Antes</p>
+                <p>Cada pedido se pasa a una planilla o a un cuaderno, cuando hay un rato. Si el chat se mueve rápido, alguno queda afuera.</p>
+              </div>
+              <div class="ba-item ba-item--after">
+                <p class="ba-label">Después</p>
+                <p>El pedido entra solo a la planilla, con cliente, ítems y fecha, y al cierre del día sale un resumen.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-mock">
+            <div class="sheet">
+              <div class="sheet-bar">Planilla de pedidos <span class="ex">ejemplo</span></div>
+              <table>
+                <thead>
+                  <tr><th>Hora</th><th>Cliente</th><th>Pedido</th><th>Entrega</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>09:20</td><td>Cliente A</td><td>20 litros de aceite 10W40</td><td>Hoy</td></tr>
+                  <tr><td>09:47</td><td>Cliente B</td><td>Juego de correa y tensor</td><td>18/11</td></tr>
+                  <tr class="is-new"><td>10:14</td><td>Cliente C</td><td>12 filtros de aceite, 4 pastillas</td><td>Mañana</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <article class="case case--flip">
+          <div class="case-copy">
+            <h3>Turnos y recordatorios automáticos</h3>
+            <p class="case-lead">Para consultorios, estudios y cualquier negocio que reserve hora. El calendario se actualiza y el aviso sale solo.</p>
+            <div class="ba">
+              <div class="ba-item">
+                <p class="ba-label">Antes</p>
+                <p>Los turnos se dan por teléfono o por mensaje, se anotan a mano y el recordatorio depende de que alguien se acuerde.</p>
+              </div>
+              <div class="ba-item ba-item--after">
+                <p class="ba-label">Después</p>
+                <p>La reserva queda cargada y el recordatorio se manda solo, por WhatsApp o por mail, el día anterior o a la hora que definan.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-mock">
+            <div class="book-mock">
+              <div class="cal">
+                <div class="cal-bar">Agenda del martes <span class="ex">ejemplo</span></div>
+                <div class="cal-grid">
+                  <div class="slot is-taken"><b>09:00</b><span>Reservado</span></div>
+                  <div class="slot is-new"><b>10:00</b><span>Ana · confirmado</span></div>
+                  <div class="slot is-free"><b>11:30</b><span>Libre</span></div>
+                  <div class="slot is-taken"><b>16:00</b><span>Reservado</span></div>
+                </div>
+              </div>
+              <div class="wa">
+                <div class="wa-top">
+                  <div class="wa-avatar">AN</div>
+                  <div>
+                    <div class="wa-who">Recordatorio de turno</div>
+                    <div class="wa-sub">Mensaje automático · ejemplo</div>
+                  </div>
+                </div>
+                <div class="wa-body">
+                  <div class="bub bub-out">Hola Ana, te recordamos tu turno de mañana martes a las 10:00. Si no podés venir, respondé a este mensaje y lo reprogramamos.<time>18:00 <span class="ticks">✓✓</span></time></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-copy">
+            <h3>Presupuestos y cotizaciones en PDF</h3>
+            <p class="case-lead">Para cuando cada cotización se arma en un documento, se formatea y se manda una por una.</p>
+            <div class="ba">
+              <div class="ba-item">
+                <p class="ba-label">Antes</p>
+                <p>Los precios salen de una planilla o de un PDF, y el presupuesto se escribe a mano cada vez que un cliente lo pide.</p>
+              </div>
+              <div class="ba-item ba-item--after">
+                <p class="ba-label">Después</p>
+                <p>Completan un formulario o una fila en la planilla y sale el PDF listo para enviar, con su membrete y sus condiciones.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-mock">
+            <div class="pdf-wrap">
+              <article class="pdf">
+                <div class="pdf-head">
+                  <h4>Presupuesto</h4>
+                  <div class="pdf-meta">
+                    <span class="ex">ejemplo</span>
+                    <span>Nº 032</span>
+                    <span>13/11/2026</span>
+                  </div>
+                </div>
+                <table>
+                  <tr><td>Filtro de aceite × 12</td><td>$48.000</td></tr>
+                  <tr><td>Pastillas de freno × 4</td><td>$72.000</td></tr>
+                  <tr><td>Envío a sucursal</td><td>$6.500</td></tr>
+                </table>
+                <div class="pdf-total"><span>Total</span><span>$126.500</span></div>
+                <p class="pdf-foot">Validez 7 días. Precios de ejemplo, no pertenecen a un negocio real.</p>
+              </article>
+            </div>
+          </div>
+        </article>
+
+        <article class="case case--flip">
+          <div class="case-copy">
+            <h3>Facturas, planillas y seguimiento</h3>
+            <p class="case-lead">Para dejar de cargar a mano lo que ya está en un mail o en un PDF, y de perseguir de memoria quién no pagó o no volvió a pedir.</p>
+            <div class="ba">
+              <div class="ba-item">
+                <p class="ba-label">Antes</p>
+                <p>Las facturas se pasan a una planilla una por una. Quién no pagó o quién no volvió a pedir queda en la cabeza de alguien, o en un Excel suelto.</p>
+              </div>
+              <div class="ba-item ba-item--after">
+                <p class="ba-label">Después</p>
+                <p>La carga se hace sola y queda a la vista quién no pagó y quién no reordenó, para dar el siguiente paso con tiempo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-mock">
+            <div class="follow">
+              <div class="follow-bar">Seguimiento de clientes <span class="ex">ejemplo</span></div>
+              <div class="follow-row">
+                <div>
+                  <strong>Cliente D</strong>
+                  <span>Factura del 16/10, aún sin cobrar</span>
+                </div>
+                <span class="tag tag-pay">Sin cobrar</span>
+              </div>
+              <div class="follow-row">
+                <div>
+                  <strong>Cliente E</strong>
+                  <span>Último pedido el 2/10</span>
+                </div>
+                <span class="tag tag-reorder">Sin nuevo pedido</span>
+              </div>
+              <div class="follow-row">
+                <div>
+                  <strong>Cliente F</strong>
+                  <span>Factura del 4/11, aún sin cobrar</span>
+                </div>
+                <span class="tag tag-pay">Sin cobrar</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="nv-section" id="como" style="padding-top:24px">
+      <div class="nv-wrap">
+        <div class="nv-head">
+          <h2>Cómo trabajamos</h2>
+          <p>No arrancamos por la herramienta. Primero entendemos cómo lo hacen hoy, y recién después automatizamos.</p>
+        </div>
+        <div class="nv-steps nv-steps-4">
+          <div class="nv-step">
+            <h3>Miramos el proceso</h3>
+            <p>Nos cuentan cómo lo hacen hoy: por dónde entra el pedido, quién lo anota y dónde se traba.</p>
+          </div>
+          <div class="nv-step">
+            <h3>Lo ordenamos</h3>
+            <p>Armamos el recorrido, sin dar vueltas: qué entra, qué sale y quién interviene en cada paso.</p>
+          </div>
+          <div class="nv-step">
+            <h3>Lo probamos en chico</h3>
+            <p>Primero una prueba chica, con datos de ejemplo, para ver que cierra antes de dejarlo andando.</p>
+          </div>
+          <div class="nv-step">
+            <h3>Lo automatizamos</h3>
+            <p>Cuando les cierra, lo dejamos en marcha y les mostramos cómo usarlo en el día a día.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nv-section" id="planes" style="padding-top:24px">
+      <div class="nv-wrap">
+        <div class="nv-head">
+          <h2>Un plan de entrada, y después lo vemos</h2>
+          <p>El plan de entrada cubre una automatización simple. Si el proceso es más largo o hay que encadenar varias tareas, lo charlamos y cotizamos según lo que haya que resolver.</p>
+        </div>
+        <div class="nv-plans nv-plans-3">
+          <article class="nv-plan nv-featured">
+            <span class="nv-flag">Para arrancar</span>
+            <h3>Plan de entrada</h3>
+            <p class="nv-for">Una automatización simple: por ejemplo, pedidos de WhatsApp a una planilla, o un recordatorio automático.</p>
+            <p class="nv-price">$90.000<small>ARS</small></p>
+            <ul>
+              <li>Un solo proceso, bien resuelto</li>
+              <li>Lo miramos, lo ordenamos y lo probamos en chico</li>
+              <li>Les mostramos cómo queda andando</li>
+            </ul>
+            <a class="nv-btn nv-btn-lime" href="mailto:nodoventas.ar@gmail.com?subject=Plan%20de%20entrada%20%C2%B7%20automatizaci%C3%B3n">Quiero el plan de entrada</a>
+          </article>
+          <article class="nv-plan">
+            <h3>Plan intermedio</h3>
+            <p class="nv-for">Cuando hay que encadenar dos o tres tareas, por ejemplo el pedido, la planilla y un aviso.</p>
+            <p class="nv-price-phrase">Cotizamos según el proceso</p>
+            <ul>
+              <li>Varios pasos de un mismo proceso</li>
+              <li>Prueba chica antes de dejarlo en marcha</li>
+              <li>Ajustes hasta que les cierre</li>
+            </ul>
+            <a class="nv-btn nv-btn-line" href="mailto:nodoventas.ar@gmail.com?subject=Plan%20intermedio%20%C2%B7%20automatizaci%C3%B3n">Lo charlamos</a>
+          </article>
+          <article class="nv-plan">
+            <span class="nv-flag">A medida, lo charlamos</span>
+            <h3>A medida</h3>
+            <p class="nv-for">Procesos más largos, varios sectores del negocio, o una automatización que hay que diseñar juntos.</p>
+            <p class="nv-price-phrase">Cotizamos según el proceso</p>
+            <ul>
+              <li>Recorremos el proceso con ustedes</li>
+              <li>Propuesta concreta, sin un paquete cerrado de antemano</li>
+              <li>Lo implementamos cuando les cierre</li>
+            </ul>
+            <a class="nv-btn nv-btn-line" href="mailto:nodoventas.ar@gmail.com?subject=Automatizaci%C3%B3n%20a%20medida">Lo charlamos</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="nv-section" style="padding-top:24px">
+      <div class="nv-wrap">
+        <div class="nv-cta">
+          <div>
+            <h2>Lo charlamos</h2>
+            <p>Cuéntenos qué tarea les come el día: pedidos, turnos, cotizaciones o el seguimiento de clientes. Lo vemos juntos y les decimos si se puede resolver con el plan de entrada o si conviene cotizarlo.</p>
+            <a class="nv-mail" href="mailto:nodoventas.ar@gmail.com">nodoventas.ar@gmail.com</a>
+          </div>
+          <a class="nv-btn nv-btn-lime" href="mailto:nodoventas.ar@gmail.com?subject=Automatizaci%C3%B3n%20de%20procesos">Escribir a Nodo Ventas</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nv-footer">
+    <div class="nv-wrap">
+      <img src="./img/nodo-ventas-logo.svg" alt="Nodo Ventas" width="146" height="24">
+      <p class="nv-disclaimer">Precios en pesos argentinos, de lanzamiento (noviembre 2026), y se confirman por mail. Los datos de las pantallas son de ejemplo y no pertenecen a un cliente real.</p>
+    </div>
+  </footer>
+  <script>
+    const h = document.querySelector(".nv-header");
+    addEventListener("scroll", () => h.classList.toggle("scrolled", scrollY > 8), { passive: true });
+  </script>
+</body>
+</html>

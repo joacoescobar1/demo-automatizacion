@@ -1,0 +1,311 @@
+/* Demo automatización — extensiones de nodo.css */
+
+.nv-plans-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
+@media (max-width: 900px) { .nv-plans-3 { grid-template-columns: 1fr; max-width: 520px; } }
+
+.nv-price-phrase {
+  margin-top: 22px;
+  font-family: var(--nv-display);
+  font-size: clamp(26px, 2.4vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.nv-steps-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 960px) {
+  .nv-steps-4 { grid-template-columns: 1fr 1fr; }
+  .nv-steps-4 .nv-step + .nv-step { padding-left: 28px; border-left: 1px solid var(--nv-line); border-top: 0; }
+  .nv-steps-4 .nv-step:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .nv-steps-4 .nv-step:nth-child(n + 3) { border-top: 1px solid var(--nv-line); padding-top: 28px; }
+}
+@media (max-width: 640px) {
+  .nv-steps-4 { grid-template-columns: 1fr; }
+  .nv-steps-4 .nv-step + .nv-step,
+  .nv-steps-4 .nv-step:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .nv-steps-4 .nv-step:nth-child(n + 2) { border-top: 1px solid var(--nv-line); padding-top: 28px; }
+}
+
+/* Casos */
+.nv-cases { padding: 24px 0 16px; }
+.case {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 48px 56px;
+  align-items: center;
+  padding: 72px 0;
+  border-top: 1px solid var(--nv-line);
+}
+.case:first-of-type { border-top: 0; padding-top: 12px; }
+.case--flip { grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); }
+.case--flip .case-copy { order: 2; }
+.case--flip .case-mock { order: 1; }
+.case h3 { font-size: clamp(28px, 3.4vw, 40px); }
+.case-lead { margin-top: 12px; color: var(--nv-slate); font-size: 16.5px; max-width: 46ch; }
+.ba { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 28px; }
+.ba-item p + p { margin-top: 6px; font-size: 15.5px; color: var(--nv-ink); }
+.ba-label {
+  font-family: var(--nv-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--nv-cobalt);
+}
+.ba-item--after .ba-label { color: var(--nv-ink); }
+@media (max-width: 860px) {
+  .case,
+  .case--flip { grid-template-columns: 1fr; gap: 32px; padding: 56px 0; }
+  .case--flip .case-copy,
+  .case--flip .case-mock { order: 0; }
+  .ba { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* Etiqueta de ejemplo */
+.ex {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 6px;
+  background: var(--nv-lime);
+  color: var(--nv-ink);
+  font: 700 11px/1 var(--nv-body);
+  letter-spacing: 0.02em;
+}
+
+/* Hero visual: flujo WhatsApp → planilla */
+.hero-flow {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+  animation: nv-float 1.1s var(--nv-ease) both;
+}
+.flow-join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nv-slate);
+  height: 16px;
+}
+.flow-join svg { width: 22px; height: 22px; }
+
+/* Teléfono WhatsApp */
+.wa {
+  background: #fff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -36px rgba(18,26,47,.55), 0 0 0 1px var(--nv-line);
+}
+.wa-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px 12px 16px;
+  background: #075E54;
+  color: #fff;
+}
+.wa-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #128C7E;
+  display: grid;
+  place-items: center;
+  font: 700 12px/1 var(--nv-body);
+  flex: 0 0 34px;
+}
+.wa-who { font-weight: 650; font-size: 14.5px; line-height: 1.2; }
+.wa-sub { font-size: 11.5px; opacity: .8; margin-top: 1px; }
+.wa-body {
+  background: #EFEAE2;
+  padding: 14px 12px 16px;
+  display: grid;
+  gap: 8px;
+  min-height: 168px;
+}
+.bub {
+  max-width: 88%;
+  padding: 8px 10px 6px;
+  border-radius: 12px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  position: relative;
+}
+.bub-in { background: #fff; border-top-left-radius: 4px; box-shadow: 0 1px 0 rgba(18,26,47,.06); }
+.bub-out { background: #D9FDD3; justify-self: end; border-top-right-radius: 4px; }
+.bub time {
+  display: block;
+  text-align: right;
+  font-size: 10.5px;
+  color: #667781;
+  margin-top: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.ticks { color: #53bdeb; margin-left: 3px; letter-spacing: -1px; }
+
+/* Planilla */
+.sheet {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px -36px rgba(18,26,47,.5), 0 0 0 1px var(--nv-line);
+}
+.sheet-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--nv-ink);
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.sheet table { width: 100%; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.sheet th, .sheet td { padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--nv-line); }
+.sheet th { background: var(--nv-paper); color: var(--nv-slate); font-weight: 600; font-size: 11.5px; }
+.sheet td { color: var(--nv-ink); }
+.sheet tr:last-child td { border-bottom: 0; }
+.sheet tr.is-new td { background: rgba(198,242,78,.28); }
+
+/* Resumen */
+.summary {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 16px 36px -28px rgba(18,26,47,.45), 0 0 0 1px var(--nv-line);
+  display: grid;
+  gap: 8px;
+}
+.summary h4 { font-family: var(--nv-body); font-size: 14px; font-weight: 700; letter-spacing: 0; display: flex; align-items: center; gap: 8px; }
+.summary ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13.5px; color: var(--nv-slate); }
+.summary li { display: flex; justify-content: space-between; gap: 12px; }
+.summary b { color: var(--nv-ink); font-variant-numeric: tabular-nums; font-weight: 650; }
+
+/* Turnos: calendario + recordatorio */
+.book-mock { display: grid; gap: 14px; }
+.cal {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px -36px rgba(18,26,47,.5), 0 0 0 1px var(--nv-line);
+}
+.cal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: var(--nv-ink);
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.cal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 12px; }
+.slot {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: var(--nv-paper);
+  font-size: 13px;
+  display: grid;
+  gap: 2px;
+}
+.slot b { font-variant-numeric: tabular-nums; font-size: 15px; }
+.slot span { color: var(--nv-slate); font-size: 12.5px; }
+.slot.is-free { box-shadow: inset 0 0 0 1.5px var(--nv-line); background: #fff; }
+.slot.is-taken { background: rgba(51,85,255,.1); box-shadow: inset 0 0 0 1.5px rgba(51,85,255,.35); }
+.slot.is-new { background: rgba(198,242,78,.4); box-shadow: inset 0 0 0 1.5px rgba(18,26,47,.12); }
+
+/* PDF */
+.pdf-wrap { display: grid; justify-items: center; }
+.pdf {
+  width: min(100%, 340px);
+  background: #fff;
+  border-radius: 4px 10px 10px 10px;
+  padding: 22px 22px 18px;
+  box-shadow: 0 32px 60px -32px rgba(18,26,47,.55), 0 0 0 1px var(--nv-line);
+  transform: rotate(-1.2deg);
+}
+.pdf-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid var(--nv-ink); }
+.pdf-head h4 { font-size: 22px; }
+.pdf-meta { text-align: right; font-size: 12px; color: var(--nv-slate); display: grid; gap: 4px; }
+.pdf table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.pdf td { padding: 7px 0; border-bottom: 1px solid var(--nv-line); }
+.pdf td:last-child { text-align: right; font-weight: 600; }
+.pdf-total { display: flex; justify-content: space-between; margin-top: 12px; padding-top: 10px; font-weight: 700; font-variant-numeric: tabular-nums; font-size: 15px; }
+.pdf-foot { margin-top: 10px; font-size: 11.5px; color: var(--nv-slate); }
+
+/* Seguimiento */
+.follow {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px -36px rgba(18,26,47,.5), 0 0 0 1px var(--nv-line);
+}
+.follow-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: var(--nv-ink);
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.follow-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 16px;
+  align-items: center;
+  padding: 12px 14px;
+  border-top: 1px solid var(--nv-line);
+  font-size: 13.5px;
+}
+.follow-row strong { display: block; font-weight: 650; }
+.follow-row span { color: var(--nv-slate); font-size: 12.5px; }
+.tag {
+  justify-self: end;
+  font-size: 12px;
+  font-weight: 650;
+  padding: 5px 9px;
+  border-radius: 8px;
+  background: var(--nv-paper);
+  box-shadow: inset 0 0 0 1px var(--nv-line);
+  white-space: nowrap;
+}
+.tag-pay { background: rgba(51,85,255,.1); box-shadow: inset 0 0 0 1px rgba(51,85,255,.3); color: var(--nv-cobalt-ink); }
+.tag-reorder { background: rgba(18,26,47,.06); }
+
+@media (max-width: 560px) {
+  .sheet { overflow-x: visible; }
+  .sheet table { min-width: 0; }
+  .sheet thead { display: none; }
+  .sheet tr {
+    display: grid;
+    grid-template-columns: 54px 1fr auto;
+    grid-template-areas: "hora cliente entrega" "hora pedido entrega";
+    gap: 0 8px;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--nv-line);
+    align-items: start;
+  }
+  .sheet tr:last-child { border-bottom: 0; }
+  .sheet th, .sheet td { padding: 0; border: 0; }
+  .sheet td:nth-child(1) { grid-area: hora; font-weight: 650; }
+  .sheet td:nth-child(2) { grid-area: cliente; font-weight: 650; }
+  .sheet td:nth-child(3) { grid-area: pedido; color: var(--nv-slate); }
+  .sheet td:nth-child(4) { grid-area: entrega; align-self: center; }
+  .sheet tr.is-new td { background: transparent; }
+  .sheet tr.is-new { background: rgba(198,242,78,.28); }
+  .cal-grid { grid-template-columns: 1fr 1fr; }
+  .pdf { transform: none; width: 100%; }
+}
+
+/* Anclas debajo del header sticky */
+#casos, #como, #planes, .case { scroll-margin-top: 88px; }
+
+@media (max-width: 760px) {
+  /* El aro decorativo del CTA se mete en el texto en celular */
+  .nv-cta::after { display: none; }
+}
+
